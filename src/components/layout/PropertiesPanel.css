@@ -1,9 +1,9 @@
 .properties-panel {
   width: 0;
+  min-width: 0;
   overflow: hidden;
   background: var(--color-surface-1);
-  border-left: 1px solid var(--color-surface-3);
-  transition: width var(--transition);
+  transition: width var(--transition), min-width var(--transition);
   display: flex;
   flex-direction: column;
 }
@@ -12,6 +12,7 @@
   width: 300px;
   min-width: 300px;
   overflow-y: auto;
+  border-left: 1px solid var(--color-surface-3);
 }
 
 .props-header {

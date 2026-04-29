@@ -41,16 +41,8 @@
 }
 
 .app-properties {
-  background: var(--color-surface-1);
-  border-left: 1px solid var(--color-surface-3);
-  overflow-y: auto;
-  width: 0;
-  transition: width var(--transition);
-}
-
-.app-properties.open {
-  width: 300px;
-  min-width: 300px;
+  display: flex;
+  flex-shrink: 0;
 }
 
 .app-statusbar {

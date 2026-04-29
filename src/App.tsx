@@ -11,6 +11,7 @@ import AuditOverlay from './components/audit/AuditOverlay';
 import { useAuditLog } from './hooks/useAuditLog';
 import { useSearch } from './hooks/useSearch';
 import { useKeyboardNav } from './hooks/useKeyboardNav';
+import { findPath } from './utils/treeUtils';
 import './styles/global.css';
 import './App.css';
 
@@ -36,6 +37,12 @@ export default function App() {
     setFocusedId(node.id);
     if (node.type === 'file') {
       logAction('opened', node);
+      // Sync main panel to show the file's parent folder contents
+      const path = findPath(baseData, node.id);
+      if (path && path.length >= 2) {
+        const parent = path[path.length - 2];
+        setCurrentFolder(parent);
+      }
     }
   }, [logAction]);
 
