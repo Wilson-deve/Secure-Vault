@@ -1,0 +1,89 @@
+.tree-node {
+  user-select: none;
+}
+
+.tree-row {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  gap: var(--spacing-sm);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  padding-right: var(--spacing-md);
+  transition: background var(--transition);
+  position: relative;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+.tree-row:hover {
+  background: var(--color-surface-2);
+  color: var(--color-text-primary);
+}
+
+.tree-row.selected {
+  background: var(--color-surface-2);
+  color: var(--color-text-primary);
+}
+
+.tree-row.selected::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--color-accent-blue);
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+}
+
+.tree-row.focused {
+  outline: 2px solid var(--color-accent-blue);
+  outline-offset: -2px;
+}
+
+.tree-chevron {
+  width: 12px;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  transition: transform var(--transition);
+  flex-shrink: 0;
+  visibility: hidden;
+}
+
+.tree-chevron.visible {
+  visibility: visible;
+}
+
+.tree-chevron.expanded {
+  transform: rotate(90deg);
+}
+
+.tree-icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.tree-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  font-size: 13px;
+}
+
+.search-highlight {
+  color: var(--color-accent-blue);
+  font-weight: 600;
+  background: rgba(0, 194, 255, 0.15);
+  border-radius: 2px;
+  padding: 0 1px;
+}
+
+.tree-children {
+  /* children rendered inline, depth handled by padding */
+}
