@@ -1,0 +1,110 @@
+.activity-log {
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.activity-log-empty {
+  padding: var(--spacing-xl) var(--spacing-lg);
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 12px;
+}
+
+.activity-entry {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: flex-start;
+}
+
+.activity-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.activity-dot[data-action='opened'] {
+  background: var(--color-accent-blue);
+}
+
+.activity-dot[data-action='downloaded'] {
+  background: var(--color-accent-teal);
+}
+
+.activity-dot[data-action='renamed'] {
+  background: var(--color-accent-warn);
+}
+
+.activity-dot[data-action='deleted'] {
+  background: var(--color-accent-red);
+}
+
+.activity-dot[data-action='moved'] {
+  background: var(--color-text-secondary);
+}
+
+.activity-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.activity-top {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.activity-time {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.activity-badge {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+}
+
+.action-opened {
+  background: rgba(0, 194, 255, 0.15);
+  color: var(--color-accent-blue);
+}
+
+.action-downloaded {
+  background: rgba(0, 229, 160, 0.15);
+  color: var(--color-accent-teal);
+}
+
+.action-renamed {
+  background: rgba(255, 179, 71, 0.15);
+  color: var(--color-accent-warn);
+}
+
+.action-deleted {
+  background: rgba(255, 77, 106, 0.15);
+  color: var(--color-accent-red);
+}
+
+.action-moved {
+  background: var(--color-surface-2);
+  color: var(--color-text-secondary);
+}
+
+.activity-user {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.activity-file {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  word-break: break-all;
+}
