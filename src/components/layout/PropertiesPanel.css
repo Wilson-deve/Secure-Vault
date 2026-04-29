@@ -1,0 +1,150 @@
+.properties-panel {
+  width: 0;
+  overflow: hidden;
+  background: var(--color-surface-1);
+  border-left: 1px solid var(--color-surface-3);
+  transition: width var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.properties-panel.open {
+  width: 300px;
+  min-width: 300px;
+  overflow-y: auto;
+}
+
+.props-header {
+  padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  border-bottom: 1px solid var(--color-surface-3);
+}
+
+.props-file-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.props-file-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  text-align: center;
+  word-break: break-all;
+}
+
+.props-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--color-surface-3);
+}
+
+.props-tab {
+  flex: 1;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.props-tab:hover {
+  color: var(--color-text-primary);
+}
+
+.props-tab.active {
+  color: var(--color-accent-blue);
+  border-bottom-color: var(--color-accent-blue);
+}
+
+.props-tab:focus-visible {
+  outline: 2px solid var(--color-accent-blue);
+  outline-offset: -2px;
+}
+
+.props-content {
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.props-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.props-label {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+.props-value {
+  font-size: 13px;
+  color: var(--color-text-primary);
+  word-break: break-all;
+}
+
+.props-location {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+
+.props-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+}
+
+.props-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+  border: 1px solid var(--color-surface-3);
+  color: var(--color-text-secondary);
+  background: transparent;
+}
+
+.props-btn:hover {
+  background: rgba(0, 194, 255, 0.1);
+  color: var(--color-accent-blue);
+  border-color: var(--color-accent-blue);
+}
+
+.props-btn:active {
+  transform: scale(0.97);
+}
+
+.props-btn:focus-visible {
+  outline: 2px solid var(--color-accent-blue);
+}
+
+.props-btn-primary {
+  background: rgba(0, 194, 255, 0.1);
+  color: var(--color-accent-blue);
+  border-color: var(--color-accent-blue);
+}
+
+.props-btn-primary:hover {
+  background: rgba(0, 194, 255, 0.2);
+}
