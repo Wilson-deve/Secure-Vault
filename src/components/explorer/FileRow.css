@@ -1,0 +1,56 @@
+.file-row {
+  height: 40px;
+  cursor: pointer;
+  transition: background var(--transition);
+  border-bottom: 1px solid var(--color-surface-3);
+  position: relative;
+}
+
+.file-row:hover {
+  background: var(--color-surface-2);
+}
+
+.file-row.selected {
+  background: var(--color-surface-2);
+}
+
+.file-row.selected td:first-child {
+  border-left: 2px solid var(--color-accent-blue);
+  padding-left: calc(var(--spacing-md) - 2px);
+}
+
+.file-row:focus-visible {
+  outline: 2px solid var(--color-accent-blue);
+  outline-offset: -2px;
+}
+
+.file-row td {
+  padding: 0 var(--spacing-md);
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  vertical-align: middle;
+}
+
+.file-row-name {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--color-text-primary) !important;
+  min-width: 200px;
+}
+
+.file-row-type {
+  font-family: var(--font-mono);
+  font-size: 11px !important;
+  color: var(--color-text-muted) !important;
+}
+
+.file-row-size {
+  font-family: var(--font-mono);
+  font-size: 12px !important;
+}
+
+.file-row-date {
+  font-family: var(--font-mono);
+  font-size: 12px !important;
+}

@@ -1,0 +1,153 @@
+.audit-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 64px;
+}
+
+.audit-overlay-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.audit-overlay-panel {
+  position: relative;
+  background: var(--color-surface-1);
+  border: 1px solid var(--color-surface-3);
+  border-radius: var(--radius-lg);
+  width: min(90vw, 900px);
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.audit-overlay-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  border-bottom: 1px solid var(--color-surface-3);
+}
+
+.audit-overlay-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.audit-overlay-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-md);
+  transition: color var(--transition), background var(--transition);
+  cursor: pointer;
+}
+
+.audit-overlay-close:hover {
+  color: var(--color-text-primary);
+  background: var(--color-surface-2);
+}
+
+.audit-overlay-empty {
+  padding: var(--spacing-xl);
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.audit-overlay-table-wrapper {
+  overflow-y: auto;
+  padding: var(--spacing-lg);
+}
+
+.audit-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.audit-table th {
+  text-align: left;
+  font-size: 10px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-bottom: 1px solid var(--color-surface-3);
+}
+
+.audit-table td {
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: 12px;
+  border-bottom: 1px solid var(--color-surface-3);
+  vertical-align: middle;
+}
+
+.audit-ts {
+  font-family: var(--font-mono);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.audit-user {
+  font-family: var(--font-mono);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.audit-file {
+  color: var(--color-text-primary);
+}
+
+.audit-path {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-text-muted);
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* reuse badge styles from ActivityLog */
+.activity-badge {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+}
+
+.action-opened {
+  background: rgba(0, 194, 255, 0.15);
+  color: var(--color-accent-blue);
+}
+
+.action-downloaded {
+  background: rgba(0, 229, 160, 0.15);
+  color: var(--color-accent-teal);
+}
+
+.action-renamed {
+  background: rgba(255, 179, 71, 0.15);
+  color: var(--color-accent-warn);
+}
+
+.action-deleted {
+  background: rgba(255, 77, 106, 0.15);
+  color: var(--color-accent-red);
+}
+
+.action-moved {
+  background: var(--color-surface-2);
+  color: var(--color-text-secondary);
+}

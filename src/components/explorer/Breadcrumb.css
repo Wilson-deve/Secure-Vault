@@ -1,0 +1,31 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-text-muted);
+  flex: 1;
+  overflow: hidden;
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  white-space: nowrap;
+}
+
+.breadcrumb-sep {
+  color: var(--color-surface-3);
+  margin: 0 var(--spacing-xs);
+}
+
+.breadcrumb-name {
+  color: var(--color-text-secondary);
+}
+
+.breadcrumb-name.active {
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
