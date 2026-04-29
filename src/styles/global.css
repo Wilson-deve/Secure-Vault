@@ -1,0 +1,52 @@
+@import './reset.css';
+
+:root {
+  --color-base:        #0D0F14;
+  --color-surface-1:   #141720;
+  --color-surface-2:   #1C2030;
+  --color-surface-3:   #252B3B;
+  --color-accent-blue: #00C2FF;
+  --color-accent-teal: #00E5A0;
+  --color-accent-red:  #FF4D6A;
+  --color-accent-warn: #FFB347;
+  --color-text-primary:   #E8EAED;
+  --color-text-secondary: #8892A4;
+  --color-text-muted:     #4A5568;
+  --font-sans: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 24px;
+  --transition: 150ms ease;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text-primary);
+  background: var(--color-base);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface-1);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
