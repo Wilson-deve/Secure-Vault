@@ -7,6 +7,8 @@ A keyboard-first file explorer built for enterprise teams who need to navigate, 
 ![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=flat&logo=vite&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat)
 
+**[→ Live Demo](https://secure-vault-flame.vercel.app/)**
+
 SecureVault Dashboard is an enterprise-grade file management interface designed for law firms and banks. It runs entirely in the browser, uses a dark theme optimized for long working sessions, and is built around keyboard navigation so power users never have to reach for a mouse.
 
 ---
